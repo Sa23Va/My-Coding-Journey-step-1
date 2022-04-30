@@ -1,0 +1,1056 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+/* pradžia */
+html {
+  font-family: 'Montserrat', sans-serif;
+  font-size:16px;
+}
+
+body {
+  margin:0;
+  background-image: url("img/background.png");
+  background-repeat: repeat;
+  background-color: #353535;
+}
+
+/*header*/
+.site-header {
+  background-color: #000;
+  border-bottom:2px solid #2c2c2c; 
+  max-width:100%;
+  height:50px;
+  position:sticky;
+  top:0px;
+  z-index:1;
+}
+
+.container {
+  max-width:940px;
+  margin:0 auto;
+  padding:0;
+}
+
+/*navigacijos pradzia*/
+ .meniu  {
+  max-width: 940px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.meniu li {
+  list-style:none;
+}
+
+.main-nav a {
+  color: #fff;
+  font-size:0.75rem;
+  font-weight:300;
+  text-transform:uppercase;
+  text-decoration:none;
+  margin:0;
+  padding:13px 17px;
+}
+
+.main-nav a:hover{
+  background-color:#141414;
+}
+.main-nav a:active {
+  background-color:#1292bc;
+}
+
+.logo img{
+  color:#141414;
+  height: 45px;
+  padding-top: 9px;
+}
+/* paieskos mygtukas */
+
+.search form{
+  position: relative;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+  transition: all 1s;
+  width: 40px;
+  height: 40px;
+  background:rgba(0, 0, 0, 0.30);
+  box-sizing: border-box;
+  border: 2px solid rgba(0, 0, 0, 0);
+  padding: 5px;
+}
+
+.search input{
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;;
+  height: 30px;
+  line-height: 30px;
+  outline: 0;
+  border: 0;
+  display: none;
+  font-size: 0.85em;
+  font-weight: 300;
+  color: #fff;
+  font-family: 'Montserrat', sans-serif;
+  padding: 0 20px;
+  background-color: #343434;
+}
+
+.search .fa{
+  box-sizing: border-box;
+  padding: 10px;
+  width: 40px;
+  height: 40px;
+  position: absolute;
+  top: 0;
+  right: 0;
+  color: #ffffff;
+  text-align: center;
+  font-size: 0.85em;
+  transition: all 1s;
+}
+
+.search form:hover{
+  width: 200px;
+  cursor: pointer;
+}
+
+.search form:hover input{
+  display: block;
+}
+
+.search form:hover .fa{
+  color: rgb(255, 255, 255);
+}
+/*@media meniu*/
+.mobile-nav {
+  display: none;
+}
+
+  /* hero */
+
+.hero h2 {
+  color: #fff;
+  font-size: 1.5rem;
+  font-weight: 500;
+  text-align: center;
+}
+
+.hero .container {
+  background-color:rgba(0, 0, 0, 0.30);
+  padding: 27px 27px;
+  margin: 20px auto;
+}
+
+
+/* Slideshow container */
+.mySlides {
+  background-color: #0c0c0c;
+  box-shadow:0px 0px 106px 5px rgba(0,0,0,0.53);
+}
+
+.gradient img {
+  max-width: 100%;
+}
+
+.gradient::after {
+  display: block;
+  position: relative;
+  background-image: linear-gradient(to top, rgb(0, 0, 0), rgba(43, 43, 43, 0));
+  margin-top: -363px;
+  height: 360px;
+  max-width: 100%;
+  content: '';
+}
+
+* {box-sizing:border-box}
+
+/* Slideshow container */
+.slideshow-container {
+  max-width: 1000px;
+  position: relative;
+  margin: auto;
+}
+
+/* Hide the images by default */
+.mySlides {
+  display: none;
+}
+
+/* Next & previous buttons */
+.prev, .next {
+  cursor:pointer;
+  position:absolute;
+  top:50%;
+  width:auto;
+  margin-top:-22px;
+  padding:16px;
+  color: #fff;
+  font-size:1.25rem;
+  transition:0.3s ease;
+  user-select: none;
+}
+
+/* Position the "next button" to the right */
+.next {
+  right: 0;
+}
+
+/* On hover, add a black background color with a little bit see-through */
+.prev:hover, .next:hover {
+  color: #747474;
+}
+
+/* text */
+.text h1{
+  color: #fff;
+  text-shadow: 2px 1px rgba(0, 0, 0, 0.40);
+  font-size: 2.25rem;
+  font-weight: 500;
+  position: absolute;
+  bottom:32px;
+  max-width:940px;
+  width:100%;
+  text-align:center;
+}
+.text h3{
+  color: #fff;
+  text-shadow: 2px 1px rgba(0, 0, 0, 0.40);
+  font-weight: 300;
+  font-size: 1.125rem;
+  position: absolute;
+  bottom:10px;
+  max-width:940px;
+  width:100%;
+  text-align:center;
+}
+
+/* Number text (1/3 etc) */
+.numbertext {
+  color: #717171;
+  font-size: 12px;
+  padding: 8px 12px;
+  position: absolute;
+  top: 0;
+  display: none;
+}
+
+/* The dots/bullets/indicators */
+.dot {
+  cursor: pointer;
+  height: 10px;
+  width: 10px;
+  margin: 0 2px;
+  background-color: #424141;
+  border-radius: 50%;
+  display: inline-block;
+  transition: background-color 0.3s ease;
+}
+
+.active, .dot:hover {
+  background-color: #fff;
+}
+
+/* Fading animation */
+.fade {
+  -webkit-animation-name: fade;
+  -webkit-animation-duration: 1.5s;
+  animation-name: fade;
+  animation-duration: 1.5s;
+}
+
+@-webkit-keyframes fade {
+  from {opacity: .4}
+  to {opacity: 1}
+}
+
+@keyframes fade {
+  from {opacity: .4}
+  to {opacity: 1}
+}
+
+
+
+/* sub navigacija  tapr slide ir projektų*/
+.sub-nav li, .įrašai li, .naujienlaiškiai li, .kontaktai li {
+  list-style:none;
+}
+
+.sub-nav a, .įrašai a, .naujienlaiškiai a {
+  color: #fff;
+  font-size:0.75rem;
+  font-weight:200;
+  text-transform:uppercase;
+  text-decoration:none;
+  padding:18px 9px;
+}
+.sub-nav i, .įrašai i, .naujienlaiškiai i {
+  color: #2e2e2e;
+  width:16px;
+  height:16px;
+  padding:18px 0;
+}
+
+.sub-nav i {
+  padding-top: 0;
+}
+
+
+/* projektų santrauka -*/
+/* bendras projektų vaizdas*/
+.flex-container {
+    display:flex;
+}
+
+.lastpro .flex-container, .portfolio .flex-container{
+  flex-wrap:wrap;
+  justify-content:space-between;
+  padding:20px 0;
+  padding-bottom: 0;
+}
+
+/* projekto nuotrauka*/
+.projektai img, .galerija img {
+  max-width:100%;
+  height:auto;
+  display:block;
+  border-bottom:2px solid #2c2c2c;
+  cursor: pointer;
+  transition: background-color 0.3s ease;  
+}
+
+.nukreipimas i:hover, .nuk-gal i:hover {
+  color:#fff;
+  overflow:hidden;
+  background:rgba(0, 0, 0, 0.80);
+  border-bottom: 2px solid #fff;
+}
+
+.nukreipimas i, .nuk-gal i {
+  color: transparent;
+  position: absolute;
+  padding: 101px 142px;
+}
+
+.nukreipimas i:active, .nuk-gal i:active {
+  color:#949494;
+}
+
+/* projekto pavadinimas*/
+
+.proinfo, .pavadinimas {
+  background-color:rgba(0, 0, 0, 0.30);
+  max-width: 300px;
+  height: 90px;
+}
+
+.projektai h2, .pavadinimas h2 {
+  color: #fff;
+  margin:0;
+  padding:19px 25px 14px;
+  font-size:1.125rem;
+  font-weight:500;
+  line-height:1;
+}
+/* projekto tekstas*/
+.projektai p, .pavadinimas p {
+  color: #949494;
+  margin:0;
+  padding:0 25px 19px;
+  font-size:0.688rem;
+  font-weight:200;
+  line-height:1;
+  max-height: auto;
+}
+
+/*- komentarų, šrašų skiltis + sekti - */
+
+.nav-com .flex-container {
+  flex-wrap:wrap;
+  justify-content: space-between;
+  padding:0;
+}
+
+.container .flex-container {
+  padding:0;
+}
+
+.įrašai h2{
+  color: #fff; 
+  padding:16px 25px 18px;
+  font-weight:500;
+  font-size:0.875rem;
+  margin-bottom:0;
+}
+
+.įrašai p {
+  color: #fff;
+  font-size:0.75rem;
+  font-weight:200;
+  padding:16px 25px;
+  margin-bottom: 0;
+}
+
+.postas h3 {
+  padding:16px 25px 0;
+  color: #fff;
+  font-size:1.125rem;
+  margin:12px 0 0;
+}
+
+.postas a{
+  color:#77dafa;
+  text-transform: none;
+  text-decoration:underline;
+  padding:0;
+
+}
+
+time{
+  color: #fff;
+}
+
+.postas h4 {
+  color:#949494;
+  font-size:0.688rem;
+  font-weight:300;
+  padding:0 25px 0;
+  margin: 0;
+}
+
+.postas p{
+  margin:0;
+}
+
+.langelis {
+  background-color:rgba(0, 0, 0, 0.30);
+  max-width:300px;
+  height:214px;
+  margin-bottom:20px;
+}
+ /* naujienlaiškio prenumeratos skiltis */
+
+/* submit */
+.langelis input[type=text], .langelis input[type=submit] {
+  max-width: 100%;
+  display: inline-block;
+  border: 2px solid #fff;
+  box-sizing: border-box;
+  width: 176px;
+  height:35px;
+  margin-left:25px;
+  margin-right:0;
+  background-color: #fff;
+  color: #000;
+}
+
+.tweetas-1 p {
+  border-bottom: 2px solid #2c2c2c;
+  margin-right:25px;
+  margin-left:25px;
+  padding: 25px  0 ;
+}
+
+.tweetas-2 p{
+  padding: 0 25px 20px;
+  margin-top: 23px;
+}
+
+.tweetas-2 p .bold, .tweetas-1 p .bold {
+  font-weight: bold;
+}
+
+
+/*mygtukas*/
+
+.langelis input[type=submit], .langelis input[type=submit]{
+  background-color: #1292bc;
+  color:#fff;
+  border: none;
+  width: 70px;
+  height: 35px;
+  font-size:0.75rem;
+  margin-left:0;
+}
+
+.langelis input[type=submit]:hover {
+  opacity: 0.8;
+}
+
+/* footeriso pradžia */
+
+.footer {
+  padding: 20px 37px;
+  border-top:2px solid #2c2c2c; 
+}
+
+.footer-content {
+  max-width: 940px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.copyright p {
+  margin: 0;
+  color:#fff;
+  text-decoration: none;
+  font-size:0.688rem;
+  font-weight:200;
+  letter-spacing: 0.02em;
+}
+
+.soctinklai i {
+  cursor: pointer;
+  list-style:none;
+  color: #2e2e2e;
+  height:16px;
+  width:16px;
+  padding:0 16px;
+  flex-grow:2;
+}
+
+.soctinklai i:hover {
+  color:#747474;
+}
+
+.soctinklai i:active{
+  color: #1292bc;
+}
+
+/* footeriso pabaiga */
+
+/* KONTAKTŲ PUSLAPIS */
+/* pradzia */
+.pav{
+  position: relative;
+  max-width: 940px;
+}
+.pav img {
+  max-width:100%;
+  padding-top:18px;
+  opacity: 0.5;
+}
+.tekstas h1{
+  margin: 0;
+  color: #fff;
+  text-shadow: 2px 1px rgba(0, 0, 0, 0.40);
+  text-transform:uppercase;
+  letter-spacing: 6px;
+  font-size: 3.25rem;
+  font-weight: 500;
+  max-width:940px;
+  width:100%;
+  position: absolute;
+  top:74%;
+  left:2%;
+}
+
+/* kontaktų formos struktūra */
+.kon {
+  display: flex;
+  flex-flow:column wrap;
+  align-content:center;
+  height: 500px;
+  padding: 18px 0;
+}
+
+.susisiekite {
+  flex: 1 0 100%;
+  max-width:620px;
+  background-color: #141414;
+}
+
+.zemelapis {
+  flex: 1;
+  margin-left: 18px;
+}
+
+.kontaktineinfo {
+  flex: 1;
+  background-color: #141414;
+  max-width:300px;
+  max-height:253px;
+  margin-left:18px;
+}
+
+/* kontaktų forma*/
+
+.section-content {
+  margin-left:25px;
+}
+
+.susisiekite h2 {
+  text-shadow: 2px 1px rgba(0, 0, 0, 0.40);
+  text-transform: uppercase;
+  font-weight: 500;
+  font-size: 2rem;
+  color: #fff;
+  padding: 45px 25px 20px;
+  margin: 0;
+}
+
+.section-content input[type=text] {
+  height:35px;
+  margin:0;
+}
+
+.section-content input[type=email] {
+  height:35px;
+  margin:18px 0;
+}
+.section-content textarea {
+  border: 2px solid #383838;
+  margin:0  25px 20px 0px;
+}
+
+.section-content input[type=email], input[type=text], textarea {
+  width: 514px;
+  background-color:#343434;
+  color: #cecece;
+  font-size: 0.75rem;
+  font-family:'Montserrat', sans-serif;
+  border: 2px solid #383838;
+}
+
+.section-content input:hover, .section-content textarea:hover {
+  background-color:#fff;
+  color: #000;
+}
+
+.section-content button {
+  background-color: #1292bc;
+  color:#fff;
+  border: none;
+  width: 70px;
+  height: 35px;
+  font-size:0.75rem;
+  margin-left:0;
+}
+
+.section-content button:hover {
+  opacity: 0.8;
+}
+
+
+/*žemėlapio skiltis*/
+.zem-nav i {
+  color: #2e2e2e;
+  padding-right: 9px;
+}
+
+.zem-nav a {
+  color: #fff;
+  font-size:0.75rem;
+  font-weight:200;
+  text-transform:uppercase;
+  text-decoration:none;
+  padding: 18px 0;
+}
+
+.map {
+  padding:18px 0;
+}
+
+/*kontaktiniai duomenys*/
+.kontaktineinfo h2 {
+  color: #d1d1d1;
+  text-shadow: 2px 1px rgba(0, 0, 0, 0.40);
+  text-transform: uppercase;
+  font-weight: 500;
+  font-size: 1.5rem;
+  padding: 37px 25px 0;
+  margin: 0;
+}
+
+.kont p, .kont a {
+  color: #adabab;
+  text-decoration: none;
+  font-size:0.875rem;
+  font-weight:200;
+  padding: 0 25px;
+}
+
+.kont a:hover {
+  color:#1292bc;
+}
+
+.socti {
+  padding:15px;
+}
+
+.socti i{
+  cursor: pointer;
+  list-style:none;
+  color: #2e2e2e;
+  height:16px;
+  width:16px;
+  padding:0 10px;
+}
+
+.socti i:hover {
+  color:#747474;
+}
+
+.socti i:active{
+  color: #1292bc;
+}
+
+/* portfolio puslapis*/
+
+.galerija {
+  margin-bottom: 18px;
+  margin-top: 0;
+}
+
+.d-galerija h2{
+  font-size:2.35rem;
+  font-weight:500;
+  color:#fff;
+  text-shadow: 2px 1px rgba(0, 0, 0, 0.40);
+  text-transform: uppercase;
+  margin:0;
+  padding:37px 0;
+}
+
+
+/*@media */
+
+@media all and (max-width:940px) {
+  .main-nav {
+    display:none;
+}
+.search
+{
+  display:none;
+}
+.site-header  .container {
+  display:block;
+}
+.logo {
+  float:left;
+}
+
+/*mob navigacija*/
+.mobile-nav {
+  position:absolute;
+  width:100%;
+  display:inline-block;
+}
+.mobile-nav li {
+  list-style:none;
+}
+.mobile-nav ul {
+  flex-direction:column;
+  display:none;
+  position:absolute;
+  width:100%;
+  margin:0;
+  background-color:rgba(0, 0, 0, 0.80);
+}
+.mobile-nav a {
+  color:#fff;
+  font-size:0.85rem;
+  font-weight:300;
+  text-transform: uppercase;
+  text-decoration: none;
+  margin:0 5px;
+  padding:10px 17px;
+  display:block;
+}
+.mobile-nav a:hover, .mobile-nav a:active {
+  background-color: #141414;
+  color:#fff;
+}
+
+.mobile-nav a.icon {
+  display:block;
+  position:absolute;
+  font-size:1.25rem;
+  right:0;
+  top:-45px;
+  color:#fff;
+}
+.mobile-nav a.icon:active{
+ color: #1292bc;
+}
+
+/*kontentas*/
+.container {
+  max-width: 80%;
+  display: flex;
+}
+
+.hero h2 {
+  font-size:1.25rem;
+  width:100%;
+}
+
+.mySlides {
+  box-shadow:0px 0px 80px 2px rgba(0,0,0,0.53);
+}
+
+.gradient::after {
+  height: 250px;
+  margin-top: -250px;
+}
+
+.text h1{
+  font-size:2rem;
+  width:80%;
+}
+.text h3{
+  width:80%;
+}
+
+.lastpro, .projektai{
+  flex: 0 1 30% ;
+  height: auto;
+}
+
+.nukreipimas i {
+  padding: 7.8% 11%;
+}
+
+.projektai h2 {
+  font-size:0.95rem;
+}
+
+.projektai p{
+  font-size:0.6rem;
+}
+
+.įrašai, .langelis {
+  flex: 0 30%;
+  height: auto;
+}
+
+.langelis {
+  height:266px;
+}
+
+.postas h3{
+  font-size:0.80rem;
+}
+
+.langelis input[type=submit], .langelis input[type=submit]{
+  margin: 18px 25px;
+}
+.langelis input[type=text] {
+  width: 140px;
+}
+
+.langelis h2 {
+  font-size:0.775rem;
+}
+/*kontaktų puslapis */
+
+.kon {
+  height:auto;
+  display:flex;
+  flex-flow:wrap;
+ justify-content:center;
+}
+
+.zemelapis{
+  flex:1 1 auto;
+}
+.kontaktineinfo{
+  flex:0 1 auto;
+  margin-left: 0;
+  margin-top:18px;
+  height:200px;
+}
+.tekstas h1{
+  top:70%;
+  font-size: 2.688rem;
+}
+
+.section-content input[type=email], input[type=text], textarea {
+  width: 90%;
+}
+
+.section-content textarea {
+  margin-right: 80px;
+}
+
+.section-content form {
+  padding-bottom:25px;
+}
+.susisiekite{
+  max-width:645px;
+}
+.zem-nav {
+  margin-top:14px;
+}
+
+.kontaktineinfo h2 {
+  padding:25px 25px 0;
+}
+}
+
+@media all and (max-width:770px) {
+  .proinfo {
+    height:50%;
+  }
+  .įrašai, .langelis{
+    display:flex;
+    flex-flow:column;
+    flex:1 100%;
+    margin: 0;
+  }
+  
+  .langelis{
+    max-width:600px;
+    padding:0 6px;
+  }
+
+  .postas h3 {
+    margin:0;
+  }
+  
+
+  .tweetas-1 p {
+    margin:0 25px;
+  }
+
+  .langelis h2 {
+    margin:0;
+  }
+
+  .langelis input[type=submit], .langelis input[type=submit]{
+  margin:0 0 20px;
+  }
+  .langelis input[type=text] {
+    width:176px;
+  }
+
+  .nav-com a {
+    padding:0 0 6px;
+  }
+  .section-content input[type=email], input[type=text], textarea {
+    width: 90%;
+  }
+
+  .footer {
+    margin-top:18px;
+  }
+
+}
+
+@media all and (max-width:580px)  {
+  .container {
+    display: flex;
+    flex-flow:column;
+    justify-content: center;
+  }
+
+  .hero h2 {
+    font-size: 0.75rem;
+  }
+  
+  .gradient::after {
+    height: 155px;
+    margin-top: -155px;
+  }
+
+  .text h1{
+    font-size: 1rem;
+    bottom:10px;
+  }
+
+  .text h3{
+    font-size: 0.65rem;
+    bottom:1px;
+  }
+
+ 
+.projektai h2, .projektai p {
+  width:300px;
+}
+.projektai p {
+  margin-bottom:18px ;
+}
+
+/*kontaktų psl. */
+
+.tekstas h1{
+  font-size: 2.5rem;
+  top:60%;
+}
+
+.kon{
+  display: flex;
+  flex-flow:column;
+  justify-content:center;
+}
+
+.kontaktineinfo{
+  width: 100%;
+}
+.susisiekite {
+  width: 100%;
+}
+}
+
+@media all and (max-width:400px)  {
+
+  .hero h2, .hero, .text h3{
+    display: none;
+  }
+
+  .gradient::after {
+    height: 120px;
+    margin-top: -120px;
+  }
+
+  .slideshow-container {
+    margin-top: 18px;
+  }
+
+  .text h1{
+    bottom:1px;
+    font-size: 1.25rem;
+  }
+  .projektai p {
+    font-size:0.688rem;
+  }
+  .nukreipimas i {
+    padding: 101px 142px;
+  }
+
+  .langelis, .mySlides {
+    width:300px;
+  }
+  /*kontaktai*/
+  .tekstas h1{  
+    font-size: 2rem;
+  }
+
+  .susisiekite,  .pav img {
+    width:300px;
+  }
+
+  .susisiekite h2 {
+    font-size: 1.5rem;
+  }
+  .kontaktineinfo h2 {
+    font-size: 1rem;
+  }
+
+.zemelapis, .kontaktineinfo{
+  margin-left:0;
+}
+  .map {
+    padding-bottom: 0;
+  }
+  .zemelapis, .map {
+    visibility: visible;
+  }
+
+}
